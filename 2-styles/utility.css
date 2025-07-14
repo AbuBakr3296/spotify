@@ -1,0 +1,29 @@
+.invert{
+  filter: invert(1);
+}
+.border{
+  border: 1px solid red;
+}
+.bg-gray{
+  background-color: rgb(54, 54, 54);
+}
+.stop-overflow{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.btn:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
+.bg-gray{
+  background-color: rgb(25, 25, 25);
+}
+.bg-black{
+  background-color: black;
+}
+.disable{
+  opacity: 0.4;
+}

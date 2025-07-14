@@ -15,7 +15,7 @@
 
 .btn:hover{
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: all 0.3s;
 }
 .bg-gray{
@@ -26,4 +26,17 @@
 }
 .disable{
   opacity: 0.4;
+}
+.border{
+  border: 1px solid red;
+}
+.selected {
+  border: 1px solid #5af08e !important;
+  color: #5af08e !important;
+}
+
+.btn-select{
+  /* it convert the white to spotify green */
+filter: invert(48%) sepia(96%) saturate(727%) hue-rotate(86deg) brightness(93%) contrast(96%);
+
 }

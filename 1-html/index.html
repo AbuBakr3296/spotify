@@ -4,10 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/2-styles/style.css" />
   <link rel="stylesheet" href="/2-styles/utility.css" />
-  <!-- <link rel="stylesheet" href="/2-styles/style.css" /> -->
-  <link rel="stylesheet" href="/2-styles/animation.css" />
-  <link rel="stylesheet" href="/2-styles/sd.css" />
   <link rel="icon" href="/4-images/svg/logo.svg">
   <title>Spotify - Web Player: Music for everyone</title>
 </head>
@@ -15,7 +13,7 @@
 <body>
   <div class="container ">
     <div class="left bg-black ">
-      <div class="home bg-gray ">
+      <div class="home bg-gray  ">
         <div class="logo">
           <img src="/4-images/svg/logo.svg" width="50px" alt="main logo" />
           <span>Spotify</span>
@@ -32,21 +30,21 @@
       </div>
 
       <div class="library bg-gray ">
-        <div class="heading">
+        <div class="heading ">
           <h2>Your library</h2>
           <img class="invert btn" src="/4-images/svg/add.svg" alt="add icon" />
         </div>
         <ul class="song-list-container ">
-          <li>
+          <!-- <li>
             <img class="invert" src="/4-images/svg/music-note.svg" alt="" />
             <div class="song-bio">
               <div class="song-name stop-overflow">This would be tasdfasdfasdfasdfasdfasdfasdfasdfasdfdhe song name
               </div>
               <div class="artist-name">This would be the artist name</div>
             </div>
-          </li>
+          </li> -->
         </ul>
-        <div class="footer bg-gray">
+        <div class="footer bg-gray ">
           <a href="https://www.spotify.com/pk-en/legal/">Legal</a><br />
           <a href="https://www.spotify.com/pk-en/safetyandprivacy/">Safety &amp; Privacy Center</a><br />
           <a href="https://www.spotify.com/pk-en/legal/privacy-policy/">Privacy Policy</a><br />
@@ -57,9 +55,10 @@
       </div>
 
     </div>
+
     <div class="right  bg-gray ">
       <div class="navbar">
-        <div class="nav-btn">
+        <div class="menu-btn">
           <img class="hamburger btn invert" src="/4-images/svg/hamburger.svg" alt="hamburger img">
           <img class="btn invert" src="/4-images/svg/arrow-left.svg" width="23px" alt="left arrow key" />
           <img class="btn invert" src="/4-images/svg/arrow-right.svg" width="23px" alt="right arrow key" />
@@ -74,8 +73,9 @@
       <div class="main">
         <h1>Spotify Playlist</h1>
 
-        <div class="card-container ">
-          <div class="card">
+        <div class="card-container">
+          
+          <div class="card" data-folder="three">
             <div class="card-wraper">
               <img src="/4-images/images/cart-img.jpeg" alt="" />
               <button class="play-btn btn">
@@ -86,7 +86,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card" data-folder="four">
             <div class="card-wraper">
               <img src="/4-images/images/cart-img.jpeg" alt="" />
               <button class="play-btn btn">
@@ -97,29 +97,7 @@
             </div>
           </div>
 
-          <div class="card">
-            <div class="card-wraper">
-              <img src="/4-images/images/cart-img.jpeg" alt="" />
-              <button class="play-btn btn">
-                <img src="/4-images/svg/play.svg" width="23px" alt="" />
-              </button>
-              <h2>Pal Pal</h2>
-              <p>Afusic, AliSoomoroMusidf asdf asdfasdc</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-wraper">
-              <img src="/4-images/images/cart-img.jpeg" alt="" />
-              <button class="play-btn btn">
-                <img src="/4-images/svg/play.svg" width="23px" alt="" />
-              </button>
-              <h2>Pal Pal</h2>
-              <p>Afusic, AliSoomoroMusidf asdf asdfasdc</p>
-            </div>
-          </div>
-
-          <div class="card">
+          <div class="card" data-folder="five">
             <div class="card-wraper">
               <img src="/4-images/images/cart-img.jpeg" alt="" />
               <button class="play-btn btn">
@@ -133,28 +111,32 @@
 
       </div>
       
-      <div class="playbar">
-        <div class="seekbar-div">
+      <div class="playbar border">
+        <div class="seekbar-div ">
           <div class="current-time">00:00</div>
           
           <div class="seekbar">
             <div class="has-moved"></div>
-            <div class="circle btn"></div>
+            <div class="circle "></div>
           </div>
 
           <div class="duration">00:00</div>
         </div>
         
         <div class="playbar-nav">
-          <div class="stop-overflow">Song Name</div>
-          <div class="nav-btn">
-            <img class="btn invert" src="/4-images/svg/play-previous.svg" alt="" />
-            <img class="btn invert" src="/4-images/svg/play-circle.svg" alt="" />
-            <img class="btn invert" src="/4-images/svg/play-next.svg" alt="" />
+          <div class="loop-btns stop-overflow">
+            <img class="loop-playlist" src="/4-images/svg/loop-playlist.svg" alt="">
+            <img class="loop-song" src="/4-images/svg/repeat.svg" alt="">
+            <img class="play-random" src="/4-images/svg/shuffle.svg" alt="">
           </div>
-          <div class="sound-bar">
-            <img class="btn" src="/4-images/svg/volume.svg" alt="volume bar">
-            <input type="range">
+          <div class="nav-btn">
+            <img class="invert" src="/4-images/svg/play-previous.svg" alt="" />
+            <img class="invert" src="/4-images/svg/play-circle.svg" alt="" />
+            <img class="invert" src="/4-images/svg/play-next.svg" alt="" />
+          </div>
+          <div class="soundbar">
+            <img class="sound-btn btn" src="/4-images/svg/volume.svg" alt="volume bar">
+            <input type="range" class="volume-slider" value="100">
           </div>
         </div>
       </div>
@@ -163,6 +145,7 @@
   <!-- <elevenlabs-convai agent-id="agent_01jyf1q2wmfjyt8c31b0kg0pqm"></elevenlabs-convai><script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script> -->
   <script type="module" src="/3-scripts/utility.js"></script>
   <script type="module" src="/3-scripts/script.js"></script>
+  <!-- <script type="module" src="/3-scripts/check.js"></script> -->
 </body>
 
 </html>

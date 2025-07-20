@@ -112,7 +112,7 @@ async function main() {
 
     div.querySelectorAll("a").forEach((a) => {
       //we will remove https part 1st in order to check that the ele contains any ext.
-      let name = a.href.split(`/`)[a.href.split(`/`).length - 1];
+      let name = decodeURI(a.href.split(`/`)[a.href.split(`/`).length - 1]);
       if ((!name.includes(".") && name !== "") && name !== "5-Songs") {
         playLists.push(name);
       }
@@ -307,14 +307,13 @@ async function main() {
       leftBox.style.left = "-100%";
     });
   }
-  hamburger();
   function setActiveBtn () {
     
-      let loopPLBtn = document.querySelector(".loop-playlist");
-      let loopSongBtn = document.querySelector(".loop-song");
-      let playRandomBtn = document.querySelector(".play-random");
+    let loopPLBtn = document.querySelector(".loop-playlist");
+    let loopSongBtn = document.querySelector(".loop-song");
+    let playRandomBtn = document.querySelector(".play-random");
   
-  
+    
       btnsArr.forEach((btn, index) => {
         btn.addEventListener("click", () => {
           if (getComputedStyle(loopPLBtn).display === "none" || 
@@ -335,7 +334,7 @@ async function main() {
               }
             })
           } else {
-              activeBtn = btn;
+            activeBtn = btn;
               //color the clicked btn
               btnsArr.forEach(btn => {
                 if (btn === activeBtn) {
@@ -350,4 +349,5 @@ async function main() {
       })
   
   }
+  hamburger();
 }
